@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  background: #080218;
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    color: #ffee10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+.box{
+    margin: 30px;
+    height: 350px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #ffee10;
+    border-radius: 5%;
+    transition: .6s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer; 
+} 
+
+.box::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 5%;
+  background: #ffee10;
+  transition: .5s;
+  transform: scale(.9);
+  z-index: -1;  
+} 
+
+.box:hover {
+  color: #333333;
+  /* background: #bd4343; */
+  background: #ffee10;
+  /* box-shadow: 0 0 8px #ffee10; */
+  box-shadow: 6px 7px 50px 10px rgba(255, 238, 16, 0.6);
+  text-shadow: 0 0 5px #ffffff;
+  border: 1px solid #ffee10;
+} 
+
+
+.box:hover::before {
+  transform: scale(1.3);
+  box-shadow: 0 0 15px #ffee10;
+}
+
+.bx {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #ffee10;
+    transition: .5s ease-in-out;
+    border: 1px solid #ffee10;
+    border-radius: 50%;
+    background: #080218;
+    padding: 20px;
+}
+
+.box:hover .bx {
+    color: #333333;
+    border: 1px solid #ffee10;
+    background: #ffee10;
+    /* box-shadow: inset 6px 7px 22px 14px rgba(209, 195, 13, 0.9); */
+    /* box-shadow: inset 11px 5px 24px 25px rgba(209, 195, 13, 1); */
+    /* box-shadow: rgba(93, 87, 50, 0.25) 0px 30px 60px -12px inset, rgba(245, 222, 14, 0.3) 0px 18px 36px -18px inset; */
+    box-shadow: rgb(240, 229, 80) 3px 3px 6px 0px inset, rgba(243, 207, 4, 0.836) -3px -3px 6px 1px inset;
+    /* box-shadow: inset 0px 33px 25px 0 #e7d90e, 
+                inset 0 66px 15px 0px #d3c504,
+                inset 0 99px 5px 0px #fff12a;
+                inset 0 89px 5px 0px #fff12a; */
+}
+
+</style>
+
+
+<body>
+
+    <div class="container">
+        <div class="box">
+            <i class='bx bxl-wordpress'></i>
+            <h1>Box One</h1>
+            <h3>Header Two</h3>
+        </div>
+
+        <div class="box">
+            <h1>Box Two</h1>
+            <h3>Header Two</h3>
+        </div>
+
+        <div class="box">
+            <h1>Box Three</h1>
+            <h3>Header Two</h3>
+        </div>
+    </div>
+
+</body>
+</html>
